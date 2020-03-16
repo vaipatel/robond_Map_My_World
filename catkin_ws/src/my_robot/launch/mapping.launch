@@ -18,6 +18,8 @@
       <param name="odom_frame_id"       type="string" value="odom"/>
       <param name="subscribe_depth"     type="bool"   value="true"/>
       <param name="subscribe_scan"      type="bool"   value="true"/>
+      <!-- Vai: Change below to true for scan cloud -->
+      <param name="subscribe_scan_cloud"      type="bool"   value="false"/>
 
       <!-- RTAB-Map Inputs -->
       <remap from="scan" to="/scan"/>
