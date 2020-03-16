@@ -2,10 +2,7 @@
 
 <launch>
   <!-- Arguments for launch file with defaults provided -->
-  <arg name="database_path"     default="rtabmap.db"/>
-  <arg name="rgb_topic"   default="rgb/image_raw"/>
-  <arg name="depth_topic" default="depth/image_raw"/>
-  <arg name="camera_info_topic" default="rgb/camera_info"/>  
+  <arg name="database_path"     default="$(find my_robot)/rtabmap/SumWorldRTABMap.db"/>
 
 
   <!-- Mapping Node -->
