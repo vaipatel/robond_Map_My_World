@@ -2,16 +2,16 @@
 
 ## What is the Localization problem?
 
-Localization is about estimating $p(x_{1:t}|u_{1:t},z_{1:t},m)$, where
+Localization is about estimating ![$p(x_{1:t}|u_{1:t},z_{1:t},m)$](https://render.githubusercontent.com/render/math?math=%24p(x_%7B1%3At%7D%7Cu_%7B1%3At%7D%2Cz_%7B1%3At%7D%2Cm)%24), where
 
-* $x_t$ is the robot's state at time $t$; $x_{1:t}$ is the robot's trajectory
-from time $1$ to time $t$.
-* $u_t$ is the action taken by the robot at time $t$; $u_{1:t}$ are all the
-actions taken by the robot from time $1$ to time $t$.
-* $z_t$ is the noisy measurement made by the robot at time $t$; $z_{1:t}$ are 
-all the noisy measurements made by the robot from time $1$ to time $t$.
-* $m$ is perfect information about the map of the robot's
-environment. An example of perfect info $m$ could be exact locations of 
+* ![$x_t$](https://render.githubusercontent.com/render/math?math=%24x_t%24) is the robot's state at time ![$t$](https://render.githubusercontent.com/render/math?math=%24t%24); ![$x_{1:t}$](https://render.githubusercontent.com/render/math?math=%24x_%7B1%3At%7D%24) is the robot's trajectory
+from time ![$1$](https://render.githubusercontent.com/render/math?math=%241%24) to time ![$t$](https://render.githubusercontent.com/render/math?math=%24t%24).
+* ![$u_t$](https://render.githubusercontent.com/render/math?math=%24u_t%24) is the action taken by the robot at time ![$t$](https://render.githubusercontent.com/render/math?math=%24t%24); ![$u_{1:t}$](https://render.githubusercontent.com/render/math?math=%24u_%7B1%3At%7D%24) are all the
+actions taken by the robot from time ![$1$](https://render.githubusercontent.com/render/math?math=%241%24) to time ![$t$](https://render.githubusercontent.com/render/math?math=%24t%24).
+* ![$z_t$](https://render.githubusercontent.com/render/math?math=%24z_t%24) is the noisy measurement made by the robot at time ![$t$](https://render.githubusercontent.com/render/math?math=%24t%24); ![$z_{1:t}$](https://render.githubusercontent.com/render/math?math=%24z_%7B1%3At%7D%24) are 
+all the noisy measurements made by the robot from time ![$1$](https://render.githubusercontent.com/render/math?math=%241%24) to time ![$t$](https://render.githubusercontent.com/render/math?math=%24t%24).
+* ![$m$](https://render.githubusercontent.com/render/math?math=%24m%24) is perfect information about the map of the robot's
+environment. An example of perfect info ![$m$](https://render.githubusercontent.com/render/math?math=%24m%24) could be exact locations of 
 landmarks in an environment.
 
 So in localization we want to estimate the robot's state given the actions,
@@ -19,17 +19,17 @@ measurements and map.
 
 ## What is the Mapping problem?
 
-As it turns out, in a lot of cases, we do not have an exact map $m$. Here, we
+As it turns out, in a lot of cases, we do not have an exact map ![$m$](https://render.githubusercontent.com/render/math?math=%24m%24). Here, we
 can think about tackling two problems given the data we have.
 
 * Mapping with known poses: If we have data about the robot's trajectory
-$x_{1:t}$, we can try to estimate $p(m|x_{1:t}, z_{1:t})$.
+![$x_{1:t}$](https://render.githubusercontent.com/render/math?math=%24x_%7B1%3At%7D%24), we can try to estimate ![$p(m|x_{1:t}, z_{1:t})$](https://render.githubusercontent.com/render/math?math=%24p(m%7Cx_%7B1%3At%7D%2C%20z_%7B1%3At%7D)%24).
 * Mapping with unknown poses or SLAM: If we don't even have data about the
 robot's trajectory, we're in a bit of a chicken-egg sich. We need to
 simultaneously develop an understanding of where the robot is and where the
 environment is from the only things the robot knows - it's actions and it's
 noisy measurements. That is, we try to estimate
-$p(x_{1:t}, m|u_{1:t}, z_{1:t})$.
+![$p(x_{1:t}, m|u_{1:t}, z_{1:t})$](https://render.githubusercontent.com/render/math?math=%24p(x_%7B1%3At%7D%2C%20m%7Cu_%7B1%3At%7D%2C%20z_%7B1%3At%7D)%24).
 
 ## Mapping challenges
 
