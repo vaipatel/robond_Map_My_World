@@ -19,8 +19,11 @@ measurements and map.
 
 ## What is the Mapping problem?
 
-As it turns out, in a lot of cases, we do not have an exact map ![$m$](https://render.githubusercontent.com/render/math?math=%24m%24). Here, we
-can think about tackling two problems given the data we have.
+As it turns out, in a lot of cases, we do not have an exact map ![$m$](https://render.githubusercontent.com/render/math?math=%24m%24). 
+The Mapping problem concern itself with finding an estimate of the map ![$m$](https://render.githubusercontent.com/render/math?math=%24m%24).
+
+Depending on what else we know other than the map, we can think about further
+classifying the Mapping problem into two problems.
 
 * Mapping with known poses: If we have data about the robot's trajectory
 ![$x_{1:t}$](https://render.githubusercontent.com/render/math?math=%24x_%7B1%3At%7D%24), we can try to estimate ![$p(m|x_{1:t}, z_{1:t})$](https://render.githubusercontent.com/render/math?math=%24p(m%7Cx_%7B1%3At%7D%2C%20z_%7B1%3At%7D)%24).
