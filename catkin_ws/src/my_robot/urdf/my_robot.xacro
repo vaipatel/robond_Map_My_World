@@ -151,7 +151,7 @@
     </visual>
 
   </link>
-
+  
   <link name='spoiler'>
     <inertial>
       <mass value="0.1"/>
@@ -201,28 +201,48 @@
 
 
     <collision name='back_caster_collision'>
-      <origin xyz="-0.25 0 -0.1" rpy=" 0 0 0"/>
+      <origin xyz="-0.3 0 -0.1" rpy=" 0 0 0"/>
       <geometry>
         <sphere radius="0.099"/>
       </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0</mu>
+            <mu2>0</mu2>
+            <slip1>1.0</slip1>
+            <slip2>1.0</slip2>
+          </ode>
+        </friction>
+      </surface>
     </collision>
 
     <!-- <visual name='back_caster_visual'>
-      <origin xyz="-0.25 0 -0.1" rpy=" 0 0 0"/>
+      <origin xyz="-0.3 0 -0.1" rpy=" 0 0 0"/>
       <geometry>
         <sphere radius="0.1"/>
       </geometry>
     </visual> -->
 
     <collision name='front_caster_collision'>
-      <origin xyz="0.25 0 -0.1" rpy=" 0 0 0"/>
+      <origin xyz="0.3 0 -0.1" rpy=" 0 0 0"/>
       <geometry>
         <sphere radius="0.099"/>
       </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>0</mu>
+            <mu2>0</mu2>
+            <slip1>1.0</slip1>
+            <slip2>1.0</slip2>
+          </ode>
+        </friction>
+      </surface>
     </collision>
 
     <!-- <visual name='front_caster_visual'>
-      <origin xyz="0.25 0 -0.1" rpy=" 0 0 0"/>
+      <origin xyz="0.3 0 -0.1" rpy=" 0 0 0"/>
       <geometry>
         <sphere radius="0.1"/>
       </geometry>
