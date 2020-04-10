@@ -2,6 +2,8 @@
 
 - [What is the Localization problem?](#what-is-the-localization-problem)
 - [What is the Mapping problem?](#what-is-the-mapping-problem)
+  - [Mapping with known poses](#mapping-with-known-poses)
+  - [Mapping with unknown poses or SLAM](#mapping-with-unknown-poses-or-slam)
 - [Mapping challenges](#mapping-challenges)
 
 ## What is the Localization problem?
@@ -29,13 +31,15 @@ The Mapping problem concerns itself with finding an estimate of the map ![$m$](h
 Depending on what information is available to estimate the map, we can
 think about further classifying the Mapping problem into two problems.
 
-* Mapping with known poses: If we have data about the robot's trajectory
-![$x_{1:t}$](https://render.githubusercontent.com/render/math?math=%24x_%7B1%3At%7D%24), we can try to estimate ![$p(m|x_{1:t}, z_{1:t})$](https://render.githubusercontent.com/render/math?math=%24p(m%7Cx_%7B1%3At%7D%2C%20z_%7B1%3At%7D)%24).
-* Mapping with unknown poses or SLAM: If we don't even have data about the
-robot's trajectory, we're in a bit of a chicken-egg sich. We need to
-simultaneously develop an understanding of where the robot is and where the
-environment is from the only things the robot knows - it's actions and it's
-noisy measurements. That is, we try to estimate
+### Mapping with known poses
+If we have data about the robot's trajectory ![$x_{1:t}$](https://render.githubusercontent.com/render/math?math=%24x_%7B1%3At%7D%24),
+we can try to estimate ![$p(m|x_{1:t}, z_{1:t})$](https://render.githubusercontent.com/render/math?math=%24p(m%7Cx_%7B1%3At%7D%2C%20z_%7B1%3At%7D)%24).
+
+### Mapping with unknown poses or SLAM
+If we don't even have data about the robot's trajectory, we're in a bit of a
+chicken-egg sich. We need to simultaneously develop an understanding of where
+the robot is and where the environment is from the only things the robot knows
+- it's actions and it's noisy measurements. That is, we try to estimate
 ![$p(x_{1:t}, m|u_{1:t}, z_{1:t})$](https://render.githubusercontent.com/render/math?math=%24p(x_%7B1%3At%7D%2C%20m%7Cu_%7B1%3At%7D%2C%20z_%7B1%3At%7D)%24).
 
 ## Mapping challenges
