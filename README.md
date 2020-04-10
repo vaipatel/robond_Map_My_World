@@ -1,5 +1,9 @@
 # Submissions/Notes for Udacity RoboND 2020 - Map My World
 
+- [What is the Localization problem?](#what-is-the-localization-problem)
+- [What is the Mapping problem?](#what-is-the-mapping-problem)
+- [Mapping challenges](#mapping-challenges)
+
 ## What is the Localization problem?
 
 Localization is about estimating ![$p(x_{1:t}|u_{1:t},z_{1:t},m)$](https://render.githubusercontent.com/render/math?math=%24p(x_%7B1%3At%7D%7Cu_%7B1%3At%7D%2Cz_%7B1%3At%7D%2Cm)%24), where
